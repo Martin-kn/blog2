@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Martin-kn</title>
+    <link>//localhost:33117/</link>
+    <description>Recent content on Martin-kn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:33117/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home Lab</title>
+      <link>//localhost:33117/posts/homelab/2021-07-22-homelab/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:33117/posts/homelab/2021-07-22-homelab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Illegal copy / Oversize al actualizar firmware - Switch Cisco</title>
+      <link>//localhost:33117/posts/cisco/2021-07-21-error-al-actualizar-un-switch-cisco/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:33117/posts/cisco/2021-07-21-error-al-actualizar-un-switch-cisco/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
