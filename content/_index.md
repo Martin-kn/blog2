@@ -11,7 +11,7 @@ TryHackMe profile:
 </div>
 
 
-I invite you to check my [Github](https://github.com/Martin-kn/) profile and my [HomeLab](https://martin-kn.github.io/Blog/blog/posts/homelab/2021-07-22-homelab/) proyect.
+I invite you to check my [Github](https://github.com/Martin-kn/) profile and my [HomeLab](https://martin-kn.github.io/blog2/posts/homelab/2021-07-22-homelab/) proyect.
 
 NOTE:
 This site is being migrated, changes are being made as well as new posts will be uploaded in the coming days.
