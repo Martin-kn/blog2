@@ -15,6 +15,7 @@ categories:
 tags: ["linux","homelab"]
 ---
 
+`NOTA:` Se realizaron muchos cambios con el paso de los años, los voy actualizar en un nuevo post.
 
 Laboratorio en proceso, para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
 
