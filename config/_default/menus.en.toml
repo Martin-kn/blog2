@@ -22,10 +22,17 @@
   weight = 2
 
 [[main]]
+  name = "Cheatsheet"
+  pageRef = "cheatsheet"
+  weight = 3
+  
+[[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/Martin-kn" 
   weight = 14
+
+
 
 #[[main]]
 #  name = "Parent"
