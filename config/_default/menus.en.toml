@@ -21,9 +21,19 @@
   pageRef = "posts"
   weight = 2
 
+#  [[main]]
+#  name = "Cheatsheet"
+#  pageRef = "cheatsheet"
+#  weight = 3
+    
 [[main]]
   name = "Cheatsheet"
-  pageRef = "cheatsheet"
+  weight = 3
+
+[[main]]
+  name = "Windows"
+  parent = "Cheatsheet"
+  pageRef = "/cheatsheet/windows/"
   weight = 3
   
 [[main]]
