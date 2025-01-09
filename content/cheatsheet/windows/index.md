@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Windows cheatsheet
-date: false
+date: 2024-08-15
 classes: wide
 header:
   teaser: 
