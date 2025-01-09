@@ -290,4 +290,11 @@ Para habilitar WinRE, ejecute
 7. Encuentre el disco con el label "WIndows" o "OSDisk" 
 8. En CMD, ejecute los comandos Notepad
 9. Esto va abrir una aplicación de Notepad, vaya a file open y busque en el disco hasta encontrar la carpeta Windows 
-10. 
+10. Luego de confirmar el disco donde Windows esta instalado, continue con los siguientes pasos:
+(Los pasos siguientes asumen que el disco del OS es D:, si el OS se encunetra en otro disco modifique los comandos acorde)
+
+`rmdir d:\Windows\WinSxS\Temp\InFlight\ /s /q`
+
+`rmdir d:\Windows\WinSxS\Temp\PendingDeletes\ /s /q`
+
+`rmdir d:\Windows\WinSxS\Temp\PendingRenames\ /s /q`
