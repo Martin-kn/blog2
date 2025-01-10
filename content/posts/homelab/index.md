@@ -40,6 +40,10 @@ Cisco sf-300-24 managed, lo cambié hace poco para poder crear Vlans anteriormen
 
 ![Proxmox!](/images/homelab/proxmox-vm.png)
 
+Update: Imagen actual de Proxmox (2024)
+
+![Lab!](/images/homelab/proxmox.png)
+
 
 - Raspberry Pi b3+: samba, nginx, wiki. 
 - Raspberry Pi b3+: motionEyeOS, sistema de vigilancia.
