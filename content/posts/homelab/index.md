@@ -19,7 +19,7 @@ tags: ["linux","homelab"]
 
 Laboratorio en proceso, para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
 
-![Lab!](/images/homelab/lab2.png)
+![Lab!](/images/homelab/lab2.png?w=200))
 
 
 <!-- <img src = "/homelab/lab2.png"> -->
@@ -38,7 +38,7 @@ Cisco sf-300-24 managed, lo cambié hace poco para poder crear Vlans anteriormen
 - Amd Fx 6300 con Proxmox: Open Media Vault ,Portainer, Ansible, Jellyfin, Nextcloud, algunas Wiki, entre otros. Cuenta con una tarjeta de red adicional que utilizo para conectar algunas vm’s con otra red.
 
 
-![Proxmox!](/images/homelab/proxmox-vm.png)
+![Proxmox!](/images/homelab/proxmox-vm.png?w=200))
 
 Update: Imagen actual de Proxmox (2024)
 
