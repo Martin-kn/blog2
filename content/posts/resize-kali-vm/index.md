@@ -90,7 +90,7 @@ Mantenemos el click en la parte blanca y arrastramos el bloque hacia la derecha:
 
 4) A continuación dejo un video de como se debería mover el bloque en /dev/sda2 para poder dejar el espacio libre listo para poder usarse en la partición Root
 
-<video src="/kali3.mp4" width="720" height="540" controls></video>
+<video src="/images/kali3.mp4" width="720" height="540" controls></video>
 
 
 5) Una vez hecho eso nos dirigimos a la particion root (/dev/sda1)
