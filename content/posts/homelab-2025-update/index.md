@@ -109,9 +109,7 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 En el post pasado mostré como estaba usando una Raspberry Pi con un relay para poder prender equipos/luces con python.
 
-<img src="/images/homelab/relay6.gif" 
-     width="400" 
-     height="500" />
+![Relay!](/images/homelab/relay6.gif)
 
 Ahora estoy planificando agregar una VM para controlar todo por el protocolo Zigbee, el cuál es más eficiente energéticamente (lo que beneficia cuando hay baterias de por medio, otro projecto que voy a comentar en otro momento).
 
