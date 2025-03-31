@@ -1,0 +1,127 @@
+---
+layout: single
+title: HomeLab 2025 Update
+excerpt: "Homelab update."
+date: 2025-03-15 
+featured_image: '/assets/images/homelab/lab2.png'
+image: '/homelab/lab2.png'
+classes: wide
+header:
+  teaser: /assets/images/homelab/lab2.png
+  teaser_home_page: true
+  icon: /assets/images/homelab/server.ico
+categories:
+  - server
+tags: ["linux","homelab"]
+---
+
+Este es mi HomeLab, funciona tanto para dar servicios y conexión a internet con un router/firewall virtual a mi red como para implementar y probar nuevas tecnologias.
+
+Es mi laboratorio para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
+
+![Lab!](/images/homelab/lab2.png)
+
+Que sea un lab no quiere decir que no sea estable, más abajo muestro el uptime.
+
+
+### Diagrama 
+![Lab!](/images/homelab2025/homelab2025-4.png)
+
+`NOTA:` El tercer Nic es un usb con chipset ASIX, ASX88179. Con buen soporte para BSD y Linux
+
+
+### Uptime
+![Lab!](/images/homelab2025/mordor.png)
+Este fué mi medidor de cortes de luz, hasta que alguien tiró un cable al agua e hizo corto un fin de semana.
+![Lab!](/images/homelab2025/looz.jpg)
+No llegué a sacar un screenshoot a tiempo pero estuvo activa mas de 210 días, 7 meses activo.
+
+
+
+
+
+
+### Modificaciones
+Desde el primer post del homelab pasaron varios años y se hicieron muchos cambios. Voy a mencionar lo que se hizo/modificó hasta la fecha desde el post pasado:
+
+Cabe mencionar que el último update fué hace 4 años
+
+#### Modificaiones generales
+- Se configuró Tailscale para acceder remotamente junto con ACL para limitar los accesos a cada usuario.
+- Se cambió PFsense por OPNsense
+- Cambié el dashboard donde figuran los accesos a las apps (No figuran todas). Lo uso de homepage en el navegador, también tiene agregados marcadores divididos por columnas con un buscador integrado:
+![Lab!](/images/homelab2025/dash.png)
+
+- Migré la mayor parte de VMs y LXC a Debian. 
+- Se eliminaron varias VM y servicios que no se utilizaban.
+- Traté de simplificar lo máximo posible ya que luego se hace más complejo y demandante tener que dar soporte. <!--a más VMs.-->
+- WIKI: Se migró a una wiki sin base de datos para mayor simplicidad al hacer backups o levantar nuevamente el servicio en otra VM/Docker.
+![Proxmox!](/images/homelab2025/mordorpve.png)
+
+#### NAS
+- Cambié la VM con OMV como NAS por una instalación limpia de Debian e instalé SMB allí.
+- Uso soft links apuntando a los contenedores multimedia para poder subir videos y música cómodamente.
+- En el primer post usaba una Raspberry Pi b3+ como NAS con un disco externo, hace unos años lo pase a una VM
+
+#### Seguridad / Vuln
+- En 2024 implementé Nessus para análisis de vulnerabilidades en las VM y equipos físicos, para poder remediar las vulnerabilidades con la información de los scan.
+- Hago otros scan sobre Docker y Linux, pero son manuales. Estoy viendo la forma más cómoda de automatizarlo y crear un reporte. 
+
+#### IaaC
+- Implementación de Infra as a Code y configuración del entorno:
+  - Ansible 
+  - Terraform
+
+#### Monitoreo
+
+- Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox. 
+
+
+#### Nginx Proxy manager
+- Configuración en progreso.
+
+### Firewall/Router
+
+Se configuró el firewall/router en una VM dentro de Proxmox con pci-passthrough asignando los puertos físicos. Funcionando tanto para las VM dentro de Proxmox como para por ej. el switch físico donde esta conectada la workstation.
+
+Se migró de PFsense a OPNsense. Estoy utilizando PfBlockerNG junto con unas listas para bloquear ads,tracking y páginas maliciosas. Ntopng para monitorear el tráfico.
+
+
+### AI - DeepSeek
+
+Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM para que todos en la red tengan acceso y puedan consumirlo como un servicio web. El problema es el consumo de recursos, tengo que liberar un poco de ram o usar otro equipo para poder implementarlo.
+
+### Multimedia
+(Contenido libre de copyright)
+#### Videos
+- Cambié a Jellyfin como servidor multimedia, el problema con Jellyfin es que no reconoce los soft links generados hacia la carpeta donde lee docker.
+- Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
+![Lab!](/images/homelab2025/proprietary.jpg)
+
+#### Música
+- A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
+- Posibilidad de crear listas y descargar música.
+![Lab!](/images/homelab2025/tech2.png)
+
+
+
+### Domótica
+
+En el post pasado mostré como estaba usando una Raspberry Pi con un relay para poder prender equipos/luces con python.
+
+<img src="/images/homelab/relay6.gif" 
+     width="400" 
+     height="500" />
+
+Ahora estoy planificando agregar una VM para controlar todo por el protocolo Zigbee, el cuál es más eficiente energéticamente (lo que beneficia cuando hay baterias de por medio, otro projecto que voy a comentar en otro momento).
+
+#### Sistema de riego
+
+También estoy planificando un sistema de riego por goteo automatizado para mi huerta/frutales que se controle mediante una app y devuelva informacion. 
+
+
+<iframe src="https://giphy.com/embed/xT5LMrX45sQcjqNmVy" width="480" height="250" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p</p>
+
+
+Dejo una foto de mis primeros duraznos:
+![Proxmox!](/images/homelab2025/frutal.jpeg)
