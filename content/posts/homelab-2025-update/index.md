@@ -50,7 +50,7 @@ Cabe mencionar que el último update fué hace 4 años
 - Se configuró Tailscale para acceder remotamente junto con ACL para limitar los accesos a cada usuario.
 - Se cambió PFsense por OPNsense
 - Cambié el dashboard donde figuran los accesos a las apps (No figuran todas). Lo uso de homepage en el navegador, también tiene agregados marcadores divididos por columnas con un buscador integrado:
-![Lab!](/images/homelab2025/dash.png)
+![Lab!](/images/homelab2025/dash2.png)
 
 - Migré la mayor parte de VMs y LXC a Debian. 
 - Se eliminaron varias VM y servicios que no se utilizaban.
@@ -74,7 +74,9 @@ Cabe mencionar que el último update fué hace 4 años
 
 #### Monitoreo
 
-- Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox. 
+- Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox.
+
+![Lab!](/images/homelab2025/LXC-grafana.png)
 
 
 #### Nginx Proxy manager
