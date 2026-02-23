@@ -141,4 +141,5 @@ Dejo una foto de mis primeros duraznos:
 ![Proxmox!](/images/homelab2025/frutal.jpeg)
 
 También tengo plantas de tomate cherry y estoy cultivando algunas variedades raras. Así como verdura de hoja verde, entre ellas variedades orientales.
+![cherry!](/images/homelab2025/cherry.png)
 
