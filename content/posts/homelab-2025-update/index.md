@@ -76,7 +76,7 @@ Cabe mencionar que el último update fué hace 4 años
 #### Seguridad / Vuln
 - En 2024 implementé Nessus para análisis de vulnerabilidades en las VM y equipos físicos, para poder remediar las vulnerabilidades con la información de los scan.
 - Hago otros scan sobre Docker y Linux. Por ej. análisis SAST para contenedores y scripts de hardening en Linux. 
-- Implementé un runner local para CI/CD con Gitlab CI, donde subo imágenes docker al registro y scaneos SAST.
+- Implementé un runner local para CI/CD con Gitlab CI, donde subo imágenes docker al registro y realizo scans SAST.
 
 
 #### IaaC
@@ -88,6 +88,11 @@ Cabe mencionar que el último update fué hace 4 años
 
 - Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox.
 - Entre otras herramientas de monitoreo para VMs, docker, alertas por errores, logs, etc.
+- Grafana lo uso para centralizar toda la información y poder visualizarla usando diferentes dashboards, incluso las alertas de errores.
+
+![Lab!](/images/homelab2025/grafana-server-2.png)
+
+![Lab!](/images/homelab2025/grafana-server-3.png)
 
 ![Lab!](/images/homelab2025/LXC-grafana.png)
 
@@ -121,7 +126,7 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 
 
-### Domótica
+### IOT / Domótica
 
 En el post pasado mostré como estaba usando una Raspberry Pi con un relay para poder prender equipos/luces con python.
 
