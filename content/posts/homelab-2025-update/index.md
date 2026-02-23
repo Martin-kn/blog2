@@ -66,7 +66,7 @@ Cabe mencionar que el último update fué hace 4 años
 - Se eliminaron varias VM y servicios que no se utilizaban.
 - Traté de simplificar lo máximo posible ya que luego se hace más complejo y demandante tener que dar soporte. <!--a más VMs.-->
 - WIKI: Se migró a una wiki sin base de datos para mayor simplicidad al hacer backups o levantar nuevamente el servicio en otra VM/Docker.
-![Proxmox!](/images/homelab2025/mordorpve.png)
+![Proxmox!](/images/homelab2025/proxmox-vms.png)
 
 #### NAS
 - Cambié la VM con OMV como NAS por una instalación limpia de Debian e instalé SMB allí.
