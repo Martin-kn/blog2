@@ -15,13 +15,16 @@ categories:
 tags: ["linux","homelab"]
 ---
 
-Este es mi HomeLab, funciona tanto para dar servicios y conexión a internet con un router/firewall virtual a mi red como para implementar y probar nuevas tecnologias.
+Este es mi servidor personal, funciona tanto para dar servicios a usuarios y conexión a internet con un router/firewall virtual conectado a mi red así como también para implementar y probar nuevas tecnologias.
 
-Es mi laboratorio para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
+
+Es también mi laboratorio para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
+
 
 ![Lab!](/images/homelab/lab2.png)
 
-Que sea un lab no quiere decir que no sea estable, más abajo muestro el uptime.
+Si bien algunas VM se utilizan para hacer pruebas, el servidor es estable ya que al dar internet tanto a VM's como equipos físicos en la red no debe dejar de funcionar.
+
 
 
 ### Diagrama 
@@ -75,12 +78,14 @@ Cabe mencionar que el último update fué hace 4 años
 #### Monitoreo
 
 - Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox.
+- Entre otras herramientas de monitoreo para VMs, docker, alertas por errores, logs, etc.
 
 ![Lab!](/images/homelab2025/LXC-grafana.png)
 
 
 #### Nginx Proxy manager
-- Configuración en progreso.
+- Se configuró un reverse proxy para que funcione de intermediario, redirigiendo las consultas al servidor correspondiente. Y poder configurar certificados TLS/SSL.
+
 
 ### Firewall/Router
 
@@ -117,11 +122,14 @@ Ahora estoy planificando agregar una VM para controlar todo por el protocolo Zig
 
 #### Sistema de riego
 
-También estoy planificando un sistema de riego por goteo automatizado para mi huerta/frutales que se controle mediante una app y devuelva informacion. 
+Estoy planificando un sistema de riego por goteo automatizado para mi huerta/frutales que se controle mediante una app y devuelva informacion. 
 
-
+<!--
 <iframe src="https://giphy.com/embed/xT5LMrX45sQcjqNmVy" width="480" height="250" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p</p>
-
+-->
 
 Dejo una foto de mis primeros duraznos:
 ![Proxmox!](/images/homelab2025/frutal.jpeg)
+
+También tengo plantas de tomate cherry y estoy cultivando algunas variedades raras. Así como verdura de hoja verde, entre ellas variedades orientales.
+
