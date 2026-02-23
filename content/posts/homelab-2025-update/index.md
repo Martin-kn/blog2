@@ -32,13 +32,20 @@ Si bien algunas VM se utilizan para hacer pruebas, el servidor es estable ya que
 
 `NOTA:` El tercer Nic es un usb con chipset ASIX, ASX88179. Con buen soporte para BSD y Linux
 
+Como se ve en el diagrama el NIC1 pasa directo a la VM "OPNsense" que es quién maneja la red, actua como WAN. Gestiona la red interna al igual que se conecta con otro switch físico del diagrama.
+
+Si bien esta configuración tiene sus ventajas, como por ejemplo no desperdiciar recursos, al reiniciar Proxmox se pierde toda conectividad. Y también se agrega complejidad al implementarlo.
+
+
+
 
 ### Uptime
 ![Lab!](/images/homelab2025/mordor.png)
 Este fué mi medidor de cortes de luz, hasta que alguien tiró un cable al agua e hizo corto un fin de semana.
 ![Lab!](/images/homelab2025/looz.jpg)
+<!--
 No llegué a sacar un screenshoot a tiempo pero estuvo activa mas de 210 días, 7 meses activo.
-
+-->
 
 
 
@@ -47,7 +54,7 @@ No llegué a sacar un screenshoot a tiempo pero estuvo activa mas de 210 días, 
 ### Modificaciones
 Desde el primer post del homelab pasaron varios años y se hicieron muchos cambios. Voy a mencionar lo que se hizo/modificó hasta la fecha desde el post pasado:
 
-Cabe mencionar que el último update fué hace 4 años
+Cabe mencionar que el último update fué hace 4 años 
 
 #### Modificaiones generales
 - Se configuró Tailscale para acceder remotamente junto con ACL para limitar los accesos a cada usuario.
@@ -68,7 +75,9 @@ Cabe mencionar que el último update fué hace 4 años
 
 #### Seguridad / Vuln
 - En 2024 implementé Nessus para análisis de vulnerabilidades en las VM y equipos físicos, para poder remediar las vulnerabilidades con la información de los scan.
-- Hago otros scan sobre Docker y Linux, pero son manuales. Estoy viendo la forma más cómoda de automatizarlo y crear un reporte. 
+- Hago otros scan sobre Docker y Linux. Por ej. análisis SAST para contenedores y scripts de hardening en Linux. 
+- Implementé un runner local para CI/CD con Gitlab CI, donde subo imágenes docker al registro y scaneos SAST.
+
 
 #### IaaC
 - Implementación de Infra as a Code y configuración del entorno:
