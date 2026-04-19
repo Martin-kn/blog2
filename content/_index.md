@@ -1,4 +1,4 @@
-I am currently carrying out a project that consists of having my own servers both for personal use and for testing, networking and security. And I will apply the acquired programming knowledge to create web applications/APIs that provide information or automate day-to-day tasks
+I'm a Sysadmin/Devops carrying out a project that consists of having my own servers (selfhosting) both for personal use and testing, networking and security. Where I apply the programming knowledge I've learned to create APIs / Web Apps and IaC automation.
 
 
 In my free time I like to train in cybersecurity, I Play CTF's in HackTheBox and TryHackMe 
