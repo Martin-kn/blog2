@@ -140,7 +140,9 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-![Lab!](/images/homelab2025/proprietary.jpg).Resize
+![Lab!](/assets/images/homelab2025/proprietary.jpg).Resize
+
+![Lab!](assets/images/homelab2025/proprietary.jpg).Resize
 
 <img src="/assets/images/homelab2025/proprietary.jpg" width="450" height="auto">
 
