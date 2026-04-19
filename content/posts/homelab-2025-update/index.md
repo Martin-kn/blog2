@@ -119,7 +119,7 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 - Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-<img src="/images/homelab2025/proprietary.jpg" width="200" height="100">
+<img src="/assets/images/homelab2025/proprietary.jpg" width="200" height="100">
 
 
 #### Música
