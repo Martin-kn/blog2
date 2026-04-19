@@ -113,7 +113,7 @@ Cabe mencionar que el último update fué hace 4 años
 ![Lab!](/images/homelab2025/grafana-server-2.png)
 
 ![Lab!](/images/homelab2025/grafana-server-3.png)
-
+![Lab!](/images/homelab2025/grafana-server-4.png)
 ![Lab!](/images/homelab2025/LXC-grafana.png)
 
 
@@ -140,13 +140,6 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-![Lab!](/assets/images/homelab2025/proprietary.jpg).Resize
-
-![Lab!](assets/images/homelab2025/proprietary.jpg).Resize
-
-<img src="/assets/images/homelab2025/proprietary.jpg" width="450" height="auto">
-
-<img src="/images/homelab2025/proprietary.jpg" style="max-width: 50%;">
 
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
