@@ -139,7 +139,7 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 - Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-
+<img src="/images/homelab2025/proprietary.jpg" width="500" height="auto">
 
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
@@ -152,10 +152,10 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 En el post pasado mostré como estaba usando una Raspberry Pi con un relay para poder prender equipos/luces con python.
 
-![Relay!](/images/homelab/relay6.gif)
+<!-- ![Relay!](/images/homelab/relay6.gif) -->
 
 
-<img src="/images/homelab/relay6.gif" width="300" height="auto">
+<img src="/images/homelab/relay6.gif" width="500" height="auto">
 
 Ahora estoy planificando agregar una VM para controlar todo por el protocolo Zigbee, el cuál es más eficiente energéticamente (lo que beneficia cuando hay baterias de por medio, otro projecto que voy a comentar en otro momento).
 
