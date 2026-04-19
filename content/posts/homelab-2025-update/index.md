@@ -119,8 +119,13 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 - Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-<img src="/assets/images/homelab2025/proprietary.jpg" height="50%">
+<img src="images/homelab2025/proprietary.jpg" height="50%">
 
+{{ $image := .Resources.GetMatch "images/homelab2025/proprietary.jpg" }}
+{{ with $image }}
+  {{ $resized := .Resize "500x" }}
+  <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+{{ end }}
 
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
