@@ -117,11 +117,10 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 #### Videos
 - Cambié a Jellyfin como servidor multimedia, el problema con Jellyfin es que no reconoce los soft links generados hacia la carpeta donde lee docker.
 - Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
-<!-- ![Lab!](/images/homelab2025/proprietary.jpg) -->
+![Lab!](/images/homelab2025/proprietary.jpg)
 
-{{ $image := resources.Get "/images/homelab2025/proprietary.jpg" }}
-{{ $scaled := $image.Resize "200x" }}
-<img src="{{ $scaled.RelPermalink }}" alt="proprietary">
+<img src="/images/homelab2025/proprietary.jpg" width="200" height="100">
+
 
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
