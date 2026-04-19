@@ -141,6 +141,8 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 
 <img src="/assets/images/homelab2025/proprietary.jpg" width="450" height="auto">
 
+<img src="/images/homelab2025/proprietary.jpg" style="max-width: 50%;">
+
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
 - Posibilidad de crear listas y descargar música.
