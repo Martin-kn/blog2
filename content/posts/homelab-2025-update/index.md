@@ -154,6 +154,8 @@ En el post pasado mostré como estaba usando una Raspberry Pi con un relay para 
 
 ![Relay!](/images/homelab/relay6.gif)
 
+{{< gif src="/images/homelab/relay6.gif" size="400x" >}} 
+
 Ahora estoy planificando agregar una VM para controlar todo por el protocolo Zigbee, el cuál es más eficiente energéticamente (lo que beneficia cuando hay baterias de por medio, otro projecto que voy a comentar en otro momento).
 
 #### Sistema de riego
