@@ -136,8 +136,11 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 (Contenido libre de copyright)
 #### Videos
 - Cambié a Jellyfin como servidor multimedia, el problema con Jellyfin es que no reconoce los soft links generados hacia la carpeta donde lee docker.
-- Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
+- Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no.
+
 ![Lab!](/images/homelab2025/proprietary.jpg)
+
+![Lab!](/images/homelab2025/proprietary.jpg).Resize
 
 <img src="/assets/images/homelab2025/proprietary.jpg" width="450" height="auto">
 
