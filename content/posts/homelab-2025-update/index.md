@@ -18,7 +18,7 @@ tags: ["linux","homelab"]
 Este es mi servidor personal, funciona tanto para dar servicios a usuarios y conexión a internet con un router/firewall virtual conectado a mi red así como también para implementar y probar nuevas tecnologias.
 
 
-Es también mi laboratorio para poder practicar redes, seguridad e implementar diferentes servicios para uso personal.
+<!--Es también mi laboratorio para poder practicar redes, seguridad e implementar diferentes servicios para uso personal. -->
 
 
 ![Lab!](/images/homelab/lab2.png)
@@ -89,9 +89,9 @@ Cabe mencionar que el último update fué hace 4 años
   ```
 
 #### NAS
-- Cambié la VM con OMV como NAS por una instalación limpia de Debian e instalé SMB allí.
-- Uso soft links apuntando a los contenedores multimedia para poder subir videos y música cómodamente.
-- En el primer post usaba una Raspberry Pi b3+ como NAS con un disco externo, hace unos años lo pase a una VM
+- Cambié una VM con OMV como NAS por una instalación limpia de Debian y configuré SMB allí. En lo personal me resulta más cómodo.
+- Los contenedores multimedia tienen un volumen montado al NAS para facilitar la gestión de archivos.
+- Hace unos años usaba una Raspberry Pi b3+ como NAS con un disco externo. Eso se migró a Proxmox.
 
 #### Seguridad / Vuln
 - En 2024 implementé Nessus para análisis de vulnerabilidades en las VM y equipos físicos, para poder remediar las vulnerabilidades con la información de los scan.
@@ -106,7 +106,7 @@ Cabe mencionar que el último update fué hace 4 años
 
 #### Monitoreo
 
-- Se implementó Grafana + influxDB2 que tiene buena integración con Proxmox.
+- Se implementó influxDB2 en Proxmox para almacenar métricas y mostrarlas en grafana.
 - Entre otras herramientas de monitoreo para VMs, docker, alertas por errores, logs, etc.
 - Grafana lo uso para centralizar toda la información y poder visualizarla usando diferentes dashboards, incluso las alertas de errores.
 
@@ -118,7 +118,7 @@ Cabe mencionar que el último update fué hace 4 años
 
 
 #### Nginx Proxy manager
-- Se configuró un reverse proxy para que funcione de intermediario, redirigiendo las consultas al servidor correspondiente. Y poder configurar certificados TLS/SSL.
+- Se configuró un reverse proxy para que funcione de intermediario, redirigiendo las consultas al servidor/puerto correspondiente. Y poder configurar certificados TLS/SSL.
 
 
 ### Firewall/Router
@@ -135,8 +135,8 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 ### Multimedia
 (Contenido libre de copyright)
 #### Videos
-- Cambié a Jellyfin como servidor multimedia, el problema con Jellyfin es que no reconoce los soft links generados hacia la carpeta donde lee docker.
-- Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no.
+- A día de hoy el contenedor tiene montado un volumen al NAS, pero en un principio como solución provisoria, me encontré con el problema de que no reconocía los soft links generados hacia la carpeta donde lee docker (lo cuál no me paso con otro contenedor). Esto era una solución temporal "atado con alambre".  
+- Una de las razones del cambio de Plex a Jellyfin fué el software libre/open source y que Plex no lo es.
 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
