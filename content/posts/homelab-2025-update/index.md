@@ -66,7 +66,27 @@ Cabe mencionar que el último update fué hace 4 años
 - Se eliminaron varias VM y servicios que no se utilizaban.
 - Traté de simplificar lo máximo posible ya que luego se hace más complejo y demandante tener que dar soporte. <!--a más VMs.-->
 - WIKI: Se migró a una wiki sin base de datos para mayor simplicidad al hacer backups o levantar nuevamente el servicio en otra VM/Docker.
-![Proxmox!](/images/homelab2025/proxmox-vms.png)
+
+<!-- ![Proxmox!](/images/homelab2025/proxmox-vms.png)  -->
+
+```
+  ├── Proxmox server
+  │   ├── Monitoring
+  │   ├── GitlabCI
+  │   ├── NPM
+  │   ├── IAM
+  │   ├── DockerVM
+  │   ├── Nessus
+  │   ├── OPNsense
+  │   ├── NAS
+  │   ├── Testing VM1
+  │   ├── Testing VM2
+  │   ├── ...
+  │   ├── ...
+  ├── Proxmox node2
+  │   ├── ...
+  │   ├── ...
+  ```
 
 #### NAS
 - Cambié la VM con OMV como NAS por una instalación limpia de Debian e instalé SMB allí.
@@ -119,13 +139,7 @@ Estoy corriendo Deepseek de manera local y me idea es poder pasarlo a una VM par
 - Una de las razones del cambio es que Jellyfin es software libre/open source y Plex no. 
 ![Lab!](/images/homelab2025/proprietary.jpg)
 
-<img src="images/homelab2025/proprietary.jpg" height="50%">
 
-{{ $image := .Resources.GetMatch "images/homelab2025/proprietary.jpg" }}
-{{ with $image }}
-  {{ $resized := .Resize "500x" }}
-  <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
-{{ end }}
 
 #### Música
 - A diferencia de Jellyfin el servicio de streaming de música que hosteo no tiene ningún tipo de problema con los soft links.
