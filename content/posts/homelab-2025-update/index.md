@@ -59,11 +59,12 @@ Cabe mencionar que el último update fué hace 4 años
 #### Modificaiones generales
 - Se configuró Tailscale para acceder remotamente junto con ACL para limitar los accesos a cada usuario.
 - Se cambió PFsense por OPNsense
-- Cambié el dashboard donde figuran los accesos a las apps (No figuran todas). Lo uso de homepage en el navegador, también tiene agregados marcadores divididos por columnas con un buscador integrado:
+- Estoy utilizando un dashboard simple para gestionar los accesos a las apps (no figuran  todas). En un primer momento le dí poco uso, pero a medida que fuí implementando más cosas el dashboard ya forma parte de mi día a día:
 ![Lab!](/images/homelab2025/homepage.png)
 
-- Migré la mayor parte de VMs y LXC a Debian. 
+- Migré la mayor parte de VMs y LXC a Debian, por un tema de organización y no tener diferentes distribuciones sin una justificación real.
 - Se eliminaron varias VM y servicios que no se utilizaban.
+–	Configuré diferentes herramientas de productividad que me simplifican el trabajo, algunas las voy cambiando a medida que pruebo nuevos enfoques. 
 - Traté de simplificar lo máximo posible ya que luego se hace más complejo y demandante tener que dar soporte. <!--a más VMs.-->
 - WIKI: Se migró a una wiki sin base de datos para mayor simplicidad al hacer backups o levantar nuevamente el servicio en otra VM/Docker.
 
@@ -96,7 +97,8 @@ Cabe mencionar que el último update fué hace 4 años
 #### Seguridad / Vuln
 - En 2024 implementé Nessus para análisis de vulnerabilidades en las VM y equipos físicos, para poder remediar las vulnerabilidades con la información de los scan.
 - Hago otros scan sobre Docker y Linux. Por ej. análisis SAST para contenedores y scripts de hardening en Linux. 
-- Implementé un runner local para CI/CD con Gitlab CI, donde subo imágenes docker al registro y realizo scans SAST.
+- Implementé Gitlab CI con un runner local para CI/CD, donde hago build, push de imágenes Docker al registry y realizo scan SAST.
+  
 
 
 #### IaaC
@@ -123,9 +125,10 @@ Cabe mencionar que el último update fué hace 4 años
 
 ### Firewall/Router
 
-Se configuró el firewall/router en una VM dentro de Proxmox con pci-passthrough asignando los puertos físicos. Funcionando tanto para las VM dentro de Proxmox como para por ej. el switch físico donde esta conectada la workstation.
+Se configuró el firewall/router en una VM dentro de Proxmox con pci-passthrough asignando los puertos físicos. Funcionando tanto para las VM dentro de Proxmox como equipos físicos a través de switch físico donde configure diferentes VLANs.
 
-Se migró de PFsense a OPNsense. Estoy utilizando PfBlockerNG junto con unas listas para bloquear ads,tracking y páginas maliciosas. Ntopng para monitorear el tráfico.
+Estoy utilizando un DNS local para servicios internos y también para bloquear ads, tracking y páginas maliciosas a nivel de DNS con diversas listas. Ntopng para monitorear la red.
+
 
 
 ### AI - DeepSeek
