@@ -1,16 +1,8 @@
 ---
-layout: single
 title: HomeLab 2025 Update
 excerpt: "Homelab update."
-excludeFromList: true
 date: 2025-03-15 
-featured_image: '/assets/images/homelab/lab2.png'
-image: '/homelab/lab2.png'
-classes: wide
-header:
-  teaser: /assets/images/homelab/lab2.png
-  teaser_home_page: true
-  icon: /assets/images/homelab/server.ico
+draft: true
 categories:
   - server
 tags: ["linux","homelab"]
