@@ -16,16 +16,18 @@
   weight = 1
 
 [[main]]
+  name = "Projects"
+  #pageRef = "posts"
+  pageRef = "projects"
+  weight = 2
+
+[[main]]
   name = "Blog"
   #pageRef = "posts"
   pageRef = "posts"
-  weight = 2
-  
-[[main]]
-  name = "Proyects"
-  #pageRef = "posts"
-  pageRef = "proyects"
   weight = 3
+  
+
 
 #  [[main]]
 #  name = "Cheatsheet"
