@@ -7,9 +7,6 @@ categories:
 tags: ["Windows","WinSxS"]
 ---
 
-`NOTA:` Este post se estará actualizando con nuevos pasos e información.  
-
-
 ## Intro
 
 Hace poco hice una investigación ya que había varios servidores en los que estaba trabajando que ocupaban un espacio descomunal en la ruta **C:\WinSxS** entre **65GB** a **80GB**. Al tener discos de 120GB las VMs se quedaban sin espacio facilmente. 
@@ -117,11 +114,11 @@ Problemas con los que nos podemos encontrar:
 
 
 
-
+<!--
 **La solucion ? No usar Windows**
 
 <iframe src="https://giphy.com/embed/mq5y2jHRCAqMo" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p</p>
-
+-->
 
 
 
