@@ -1,5 +1,5 @@
 ---
-title: Resize Kali linux VM in Virtualbox and VMware (or any other distro)
+title: Resize Kali Linux VM in Virtualbox and VMware
 summary: "How Add disk space to a linux vm for eg: root partition"
 date: 2025-01-02
 categories:
