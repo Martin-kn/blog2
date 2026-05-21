@@ -13,7 +13,7 @@ In this guide I'll explain how to expand the root partition of a Kali Linux VM (
 
 ## Virtualbox
 
-In the case of VirtualBox, open the **Virtualbox Media Manager**:**
+In the case of VirtualBox, open the **Virtualbox Media Manager**:
 
 `File -> Tools -> VirtualBox Media Manager` or use `Ctrl+D`
 
