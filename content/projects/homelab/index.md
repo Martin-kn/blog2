@@ -1,19 +1,11 @@
 ---
-layout: single
-title: HomeLab — Self-Hosted Infrastructure & Security Lab
+title: "HomeLab — Self-Hosted Infrastructure & Security Lab"
 date: 2025-03-15
-weight: 1  # force that appears first in results 
-featured_image: '/assets/images/homelab/lab2.png'
-image: '/homelab/lab2.png'
-classes: wide
-header:
-  teaser: /assets/images/homelab/lab2.png
-  teaser_home_page: true
-  icon: /assets/images/homelab/server.ico
-categories:
-  - server
-tags: ["linux","homelab"]
+draft: false
+summary: "Home server running on Proxmox since 2021 — DevOps, IaC, CI/CD and security tooling"
+tags: ["Linux", "Homelab", "DevOps", "Security"]
 ---
+
 
 Stack
 ```
