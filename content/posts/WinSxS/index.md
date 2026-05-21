@@ -133,13 +133,13 @@ Remember to backup any registry key before deletion.
 
 - We clear the maintenance flags by deleting the **MaintenanceFlags** value-name under
 
-`HKML\SOFTWARE\Microsoft\CurrentVersion\SideBySide`
+`HKLM\SOFTWARE\Microsoft\CurrentVersion\SideBySide`
 
   
 
 - Revisar si este entry existe **DeepCleanControl(Dword)**. La idea es que no exista esa KEY, ya que puede afectar a que el sistema no desinstale lo que no ocupa. <
 
-  `HKML\SOFTWARE\Microsoft\CurrentVersion\Configuration`
+  `HKLM\SOFTWARE\Microsoft\CurrentVersion\Configuration`
 
 - "We recomend to increase of the timeout for the **Trusted installer**, to avoid time outs during clean process":
  
@@ -148,7 +148,7 @@ Remember to backup any registry key before deletion.
 
 ```
 Locate the following subkey:
-HKML\System\CurrentControlSet\Services\TrustInstaller
+HKLM\System\CurrentControlSet\Services\TrustInstaller
 
 Right-click the TrustInstaller KEY, and then click Permissions.
 Grant the Full Control user right to the Administrators group.
@@ -213,7 +213,7 @@ En uno de los servidores logramos reducir **15GB**, que para el poco espacio de 
 Puede que como hace tanto tiempo que no se limpia WinSxS, el OS no esté borrando los componentes.
 Por lo que deberíamos hacerlo de manera manual, por recomendación de MS, ésto debe realizarse en modo seguro y no hacerlo sin tomar precauciones. Ya que si hay algún componente usando/leyendo alguno de esos archivos podría llegar a corromperse.
 
-**Próximamente haré esta parte de la guia**
+<!--**Próximamente haré esta parte de la guia**-->
 
 
 
