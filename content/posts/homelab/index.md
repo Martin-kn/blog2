@@ -1,19 +1,10 @@
 ---
-layout: single
-title: Home Lab
-excerpt: "Proyecto personal en el que fui aprendiendo bastante y de a poco voy agregando hardware, modificando o instalando nuevos servicios. La idea es también poder hostear las aplicaciones web que vaya creando a medida que voy aprendiendo mejor los frameworks e incorporando nuevas tecnologías."
+title: "HomeLab"
 date: 2021-03-15
-featured_image: '/assets/images/homelab/lab2.png'
-image: '/homelab/lab2.png'
-classes: wide
-header:
-  teaser: /assets/images/homelab/lab2.png
-  teaser_home_page: true
-  icon: /assets/images/homelab/server.ico
-categories:
-  - server
-tags: ["linux","homelab"]
+excludeFromList: true
+tags: ["Linux", "Homelab"]
 ---
+
 
 `NOTA:` Se realizaron muchos cambios con el paso de los años, los voy actualizar en un nuevo post.
 
