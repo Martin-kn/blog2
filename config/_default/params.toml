@@ -15,7 +15,7 @@ enableCodeCopy = false
 replyByEmail = false
 
 # mainSections = ["section1", "section2"]
-mainSections = ["posts"]
+mainSections = ["posts", "projects"] # Added to show both projects and posts in recent section
 # robots = ""
 
 disableImageOptimization = false
@@ -52,7 +52,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = true # only used when layout equals background
-  mainSections = ["posts", "projects"] # Added to show both projects and posts in recent section
+  
 
 [article]
   showDate = false
