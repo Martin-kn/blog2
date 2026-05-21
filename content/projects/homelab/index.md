@@ -6,6 +6,7 @@ draft: false
 summary: "Home server running on Proxmox since 2021 — DevOps, IaC, CI/CD and security tooling"
 tags: ["Linux", "Homelab", "DevOps", "Security"]
 aliases:
+  - /posts/homelab-2025-update/
   - /posts/homelab/
 ---
 Status: Active | Running since 2021 | Last updated: August 2025
