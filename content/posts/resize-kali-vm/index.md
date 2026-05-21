@@ -4,7 +4,7 @@ summary: "How Add disk space to a linux vm for eg: root partition"
 date: 2025-01-02
 categories:
   - linux
-tags: ["kali","disk","virtualbox","vmware"]
+tags: ["GParted","disk","virtualbox","vmware","kali"]
 ---
 
 `Note:` This guide assumes a standard partition layout (root + swap). If your VM uses LVM, the process is different.
@@ -83,8 +83,7 @@ Once done, the resize/move option becomes available — click it.
 
 ![image!](/images/kali-vm/7.png)
 
-`NOTE:`
-Important: In this step do NOT increase the partition size. The goal is to shift the swap block to the right, freeing up unallocated space adjacent to the root partition.
+`Important:`  In this step do NOT increase the partition size. The goal is to shift the swap block to the right, freeing up unallocated space adjacent to the root partition.
 
 Click and drag the white area of the block to move it to the right:
 
