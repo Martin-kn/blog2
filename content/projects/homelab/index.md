@@ -1,6 +1,7 @@
 ---
 title: "HomeLab — Self-Hosted Infrastructure & Security Lab"
 date: 2025-03-15
+weight: 1
 draft: false
 summary: "Home server running on Proxmox since 2021 — DevOps, IaC, CI/CD and security tooling"
 tags: ["Linux", "Homelab", "DevOps", "Security"]
