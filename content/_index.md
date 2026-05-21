@@ -7,5 +7,5 @@ TryHackMe profile:
 </div>
 
 
-I invite you to check my [Github](https://github.com/Martin-kn/) profile and my [HomeLab](https://www.martinkn.com/projects/homelab/) proyect.
+I invite you to check my [Github](https://github.com/Martin-kn/) profile and my [HomeLab](https://www.martinkn.com/projects/homelab/) project.
 
