@@ -1,6 +1,7 @@
 ---
 title: "HomeLab"
 date: 2021-03-15
+draft: true
 excludeFromList: true
 tags: ["Linux", "Homelab"]
 ---
