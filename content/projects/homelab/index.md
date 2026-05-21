@@ -1,6 +1,7 @@
 ---
 layout: single
 title: HomeLab — Self-Hosted Infrastructure & Security Lab
+weight: 1  # force that appears first in results 
 featured_image: '/assets/images/homelab/lab2.png'
 image: '/homelab/lab2.png'
 classes: wide
