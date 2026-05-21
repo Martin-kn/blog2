@@ -7,53 +7,57 @@ categories:
 tags: ["kali","disk","virtualbox","vmware"]
 ---
 
-En esta guia voy a explicar como expandir la partición root de Kali Linux (aplica a caulquier otra distribución de Linux).
+`Note:` This guide assumes a standard partition layout (root + swap). If your VM uses LVM, the process is different.
 
-Se puede usar tanto en Virtualbox, VMware como cualquiér otro programa, simplemente cambia el paso de agregar espacio a la VM.
+In this guide I'll explain how to expand the root partition of a Kali Linux VM (applies to any other Linux distro). The disk expansion steps vary depending on the hypervisor — VirtualBox or VMware — but the partition resizing process is the same for both.
 
 ## Virtualbox
 
-En el caso de Virtualbox, vamos abrir **Virtualbox media manager** 
+In the case of VirtualBox, open the **Virtualbox Media Manager**:**
 
-`File -> Tools -> Virtualbox media manager` o podemos usar `Ctrl+D`
+`File -> Tools -> VirtualBox Media Manager` or use `Ctrl+D`
 
- Primero debemos agregar el espacio a la VM, en esta caso seleccionamos Kali. Si la parte de abajo figura en gris pueden dar un refresh o apagar la VM.
+Select the VM and add the desired disk space. 
+If the bottom section appears greyed out, refresh or shut down the VM first.
 
 ![image!](/images/kali-vm/1-1.png)
 
-`En este ejemplo agregué solamente 1GB`
+`In this example only 1GB was added — adjust according to your needs.`
 
 ## VMware 
 
-En el caso de usar **VMware**:
+If using **VMware**, go to your VM and select:
 
 <!-- En virtual machine settings --> 
 
-Vamos a nustra VM, seleccionamos `"edit virtual machine settings" -> En "virtual machine settings" -> Go to Hard Disk -> Expand`
+`Edit virtual machine settings → Virtual Machine Settings 
+→ Hard Disk → Expand`
 
 ![image!](/images/kali-vm/vmware.png)
 
-Seleccionamos el espacio que deseamos agregar y damos a "Expand"
+Select the amount of space to add and click "Expand".
 
 ![image!](/images/kali-vm/vmware2.png)
 
 
-## Expansión disco
+## Expanding the Root Partition
 
-Aquí podemos ver el GB agregado "Unallocated", como se ve en la imagen figura atrás de todo del lado derecho (bloque de lineas punteadas).
+Once disk space has been added in the hypervisor, boot into Kali and open GParted (pre-installed in Kali Linux).
+
+Here we can see the added space as "Unallocated", shown on the far right of the disk layout (dotted block).
 
 ![image!](/images/kali-vm/1b.png)
 
-Lo que debemos hacer es ir moviendo el bloque para que quede posicionado al lado de /dev/sda1 para poder expandir esa partición. De lo contrario no vamos a poder hacerlo.
-
-`NOTA:` Todos estos cambios no se van aplicar de manera inmediata por lo que si se equivocan, lo pueden revertir. Para aplicar los cambios de forma definitiva lo explico al final de la guia.
-
-Seguir los pasos que se ven a continuación:
-
-1) Primer paso mover el bloque unallocated a /dev/sda2
+The unallocated block needs to be repositioned next to /dev/sda1 before we can expand the root partition. The steps below walk through that process.
 
 
-Click derecho sobre /dev/sda2 -> Resize/Move 
+Follow the steps shown below:
+
+`NOTE:` Changes in GParted are not applied immediately. You can revert them if needed. To apply changes permanently, click the green checkmark (Apply All Operations)`
+
+1. Expand /dev/sda2 to absorb the unallocated space
+
+Right-click on /dev/sda2 → Resize/Move
 
 ![image!](/images/kali-vm/2.png)
 
@@ -61,73 +65,60 @@ Seleccionar la flecha negra y arrastrarla hacia la derecha
 
 ![image!](/images/kali-vm/3.png)
 
-Quedaría así:
+Result after resizing:
 
 ![image!](/images/kali-vm/4.png)
 
-Aplicamos los cambios con el botón  [Resize/Move]
+Click [Resize/Move] to confirm.
 
-Ahora vemos en la siguiente imagen que el bloque "unallocated" forma parte de `/dev/sda2`
+The unallocated block is now part of `/dev/sda2`:
 
 ![image!](/images/kali-vm/5.png)
 
-3) Ahora debemos seleccionar Swapoff en nuestra partición swap para poder trabajar con ella.
+2. Select Swapoff on the swap partition to allow resizing it.
 
 ![image!](/images/kali-vm/6.png)
 
-Ahora se habilita la opción para poder incrementar/mover, damos click allí.
+Once done, the resize/move option becomes available — click it.
 
 ![image!](/images/kali-vm/7.png)
 
-`NOTA:`
+`NOTE:`
+Important: In this step do NOT increase the partition size. The goal is to shift the swap block to the right, freeing up unallocated space adjacent to the root partition.
 
-En este paso no hay que aumentar el espacio sino desplazar el bloque hacia el lado derecho. Lo que va permitir dejar el unallocated space listo para poder expandir nuestra partición Root
-
-Mantenemos el click en la parte blanca y arrastramos el bloque hacia la derecha:
+Click and drag the white area of the block to move it to the right:
 
 ![image!](/images/kali-vm/8.png)  
 
-
-4) A continuación dejo un video de como se debería mover el bloque en /dev/sda2 para poder dejar el espacio libre listo para poder usarse en la partición Root
+3. Below is a short video showing how to move the block in 
+/dev/sda2 to free up space for the root partition:
 
 <video controls src="https://github.com/Martin-kn/blog2/raw/refs/heads/main/assets/images/kali3.mp4" ></video>
 
 
-5) Una vez hecho eso nos dirigimos a la particion root (/dev/sda1)
+4. Now go to the root partition (/dev/sda1)
 
-Click derecho -> Resize/Move 
+Right-click → Resize/Move
 
 ![image!](/images/kali-vm/10.png)
 
-Y se debe mover la flecha negra hacia el final del bloque.
+Drag the black arrow to the end of the block to expand the partition.
 
 ![image!](/images/kali-vm/11.png)
 
 
-6) Aplicar los cambios de manera definitiva:
+5. Apply all changes permanently:
 
 ![image!](/images/kali-vm/12.png)
 
-
-At your own risk :D
+Note: This operation modifies partition layout. Ensure you have a backup or snapshot before proceeding.
 
 ![image!](/images/kali-vm/13.png)
 
-7) Por último debemos activar la swap nuevamente:
+6. Finally, re-enable the swap partition:
 
 ![image!](/images/kali-vm/14.png)
 
-
-Listo, expandimos correctamente la partición y ya podemos usarla.
-
-
-
-
-
-
-
-
-
-
+Done — the root partition has been successfully expanded.
 
 
