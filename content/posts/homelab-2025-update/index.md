@@ -2,6 +2,7 @@
 layout: single
 title: HomeLab 2025 Update
 excerpt: "Homelab update."
+excludeFromList: true
 date: 2025-03-15 
 featured_image: '/assets/images/homelab/lab2.png'
 image: '/homelab/lab2.png'
