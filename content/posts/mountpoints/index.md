@@ -1,7 +1,8 @@
 ---
 title: How to create,delete and remap mountpoints in Windows Server
 description: "Configuración de mountpoints en Windows server más configuración de VMware/Nutanix."
-date: 2024-03-15 
+date: 2024-03-15
+weight: 2
 categories:
   - server
 tags: ["windows","mountpoints","vmware","nutanix","cluster"]
