@@ -20,6 +20,12 @@
   #pageRef = "posts"
   pageRef = "posts"
   weight = 2
+  
+[[main]]
+  name = "Proyects"
+  #pageRef = "posts"
+  pageRef = "proyects"
+  weight = 3
 
 #  [[main]]
 #  name = "Cheatsheet"
@@ -28,13 +34,13 @@
     
 [[main]]
   name = "Cheatsheet"
-  weight = 3
+  weight = 5
 
 [[main]]
   name = "Windows"
   parent = "Cheatsheet"
   pageRef = "/cheatsheet/windows/"
-  weight = 3
+  weight = 5
   
 [[main]]
   identifier = "github"
