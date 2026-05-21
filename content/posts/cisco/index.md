@@ -1,32 +1,39 @@
 ---
-layout: single
-title: Illegal copy / Oversize al actualizar firmware - Switch Cisco
-excerpt: "Un problema con el que me encontré a la hora de actualizar el firmware cuando compre el switch. Errores como 'illegal copy' o 'oversize', en mi caso el modelo es SF300-24 pero no solo se limita a éste los errores. "
+title: Cisco Switch Firmware Update — Illegal Copy & Oversize Fix
 date: 2021-03-10
-classes: wide
-header:
-  teaser: /assets/images/cisco/cisco1.png
-  teaser_home_page: true
-  icon: 
 categories:
   - server
 tags:  
-  - cisco
+  - Cisco, firmware, networking, switch, TFTP
 ---
 
 
-Un problema con el que me encontré a la hora de actualizar el firmware cuando compré el switch. Errores como 'illegal copy' u 'oversize', en mi caso es el modelo es SF300-24 pero no solo se limita a este los errores.
+A problem I encountered when updating the firmware on a second-hand switch. Errors like 'illegal copy' or 'oversize' can appear during the process — in my case the model is the SF300-24, but these errors are not limited to this model.
 
 
 ### Illegal copy
 
-- illegal software format copy al subir un archivo → hay que cargar una versión anterior hasta que deje subir el firmware. Luego se puede cargar otra más nueva de manera escalonada hasta llegar a la version que necesitemos. 
+- **"Illegal software format copy"** error when uploading firmware → the switch rejects the file because the firmware version is too far ahead of the currently installed one.
 
 ![Cisco1!](/images/cisco/cisco1.png)
 
+`Solution`: install an intermediate firmware version first, then upgrade step by step until reaching the target version. Firmware files can be downloaded from the official Cisco Software Downloads page (requires a Cisco account).
+
+
+
 ### Oversize
 
-- oversize o tamaño muy grande al actualizar → en el foro de cisco dice que esto es porque tenemos que buscar dentro de esa versión la que tiene zip (que dentro de ella viene el bootloader) e instalar el bootloader. Para ello necesitamos si o si hacerlo via TFTP y levantar nuestro propio servidor para enviar el archivo.
+- **"Oversize"** error when uploading firmware → the file is too large for the current bootloader to handle.
 
 
 ![Cisco2!](/images/cisco/cisco2.png)
+
+`Solution:` download the firmware variant that includes the bootloader (available on Cisco's download page — look for the version that comes as a .zip containing both the firmware and the bootloader). 
+The bootloader must be installed via `TFTP` — a direct web upload will not work for this step.
+
+To set up a TFTP server:
+- Windows: use Tftpd64
+- Linux: install tftpd-hpa (`apt install tftpd-hpa`)
+
+Once the TFTP server is running and the file is in the correct directory, initiate the transfer from the switch's web interface or CLI pointing to your TFTP server's IP.
+
