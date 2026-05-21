@@ -3,8 +3,7 @@ title: Cisco Switch Firmware Update — Illegal Copy & Oversize Fix
 date: 2021-03-10
 categories:
   - server
-tags:  
-  - Cisco, firmware, networking, switch, TFTP
+tags: ["Cisco","firmware","networking","switch","TFTP"]
 ---
 
 
